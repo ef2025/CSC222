@@ -50,7 +50,7 @@ public class RotationChallenge {
         String rotVal = "";
         for (int i = digits; i < 0; i--) {
             // rotation loop
-            char temp = stringVal
+
             for (int j = 0; j < i; j++) {
                 // 12345678 -> 23456781
                 char moving = stringVal.charAt(j);
