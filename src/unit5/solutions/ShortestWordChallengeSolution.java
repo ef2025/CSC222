@@ -1,6 +1,8 @@
-package unit5;
+package unit5.solutions;
+
 import java.util.Scanner;
-public class ShortestWordSolution {
+
+public class ShortestWordChallengeSolution {
     public static void option2(String data) {
         int start = 0;
         int end;
@@ -39,4 +41,3 @@ public class ShortestWordSolution {
         option2(data);
     }
 }
-

@@ -1,4 +1,4 @@
-package unit5;
+package unit5.challenges;
 
 /*
 Given a string, the task is to write a function the returns a string in the reverse order.
