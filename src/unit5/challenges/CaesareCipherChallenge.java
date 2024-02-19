@@ -14,4 +14,18 @@ Write a decode method which takes an encoded string and an offset and returns th
 */
 
 public class CaesareCipherChallenge {
+    public static String encode(String message, int offset) { }
+
+    public static String decode(String message, int offset) { }
+
+    public static void main(String[] args) {
+        String s = "This is a really secret message";
+        int offset = 4;
+        String encryptedMsg = encode(s, offset);
+        System.out.println("Encrypted Message: " + encryptedMsg);
+        String decryptedMsg = decode(encryptedMsg, offset);
+        System.out.println("Decrypted Message: " + decryptedMsg);
+    }
+
+
 }
