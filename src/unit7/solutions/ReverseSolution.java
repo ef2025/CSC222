@@ -37,11 +37,6 @@ public class ReverseSolution {
         System.out.print("\nMutated Reverse: ");
         for (int i = 0; i < data.length; i++)
             System.out.print(data[i] + " ");
-
-        data = reverse2(data);
-        System.out.print("\nMutated Reverse2: ");
-        for (int i = 0; i < data.length; i++)
-            System.out.print(data[i] + " ");
     }
 
     /**
@@ -66,17 +61,20 @@ public class ReverseSolution {
             iter =  data.length / 2;
         else
             iter = data.length / 2 + 1;
-        for (int i = 0; i < data.length / 2; i++) {
+        for (int i = 0; i < iter; i++) {
             swap = data[i];
             data[i] = data[(data.length - 1) - i];
             data[data.length - i - 1] = swap;
         }
     }
 
-    public static int[] reverse2(int[] data) {
+    /**
+     *
+     * @param data
+     */
+    public static  void reverse2(int[] data) {
         int[] reversed = new int[data.length];
         for (int i = 0; i < data.length; i++)
             reversed[i] = data[(data.length - 1) - i];
-        return reversed;
     }
 }

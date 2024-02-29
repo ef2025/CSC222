@@ -14,9 +14,27 @@ Write a decode method which takes an encoded string and an offset and returns th
 */
 
 public class CaesareCipherChallenge {
-    public static String encode(String message, int offset) { }
+    public static String encode(String message, int offset) {
+        // convert message to lowercase
+        // initialize an encoded message string
+        // start loop to iterate through each character
+        // if character is not alpha add it to the encoded message
+        // else shift original message by offset (to the right) and add it to encoded message string
+        // end for
+        // return encoded message
+        return "";
+    }
 
-    public static String decode(String message, int offset) { }
+    public static String decode(String message, int offset) {
+        // initialze decoded message string
+        // start loop to iterate through each character
+        // if character is not alpha, add it to the decoded message
+        // else shift original by offset to the left
+        // end loo
+        // return decoded message
+        return "";
+
+    }
 
     public static void main(String[] args) {
         String s = "This is a really secret message";
