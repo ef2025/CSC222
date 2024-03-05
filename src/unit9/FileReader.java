@@ -7,6 +7,7 @@ import java.util.Scanner; //
 
 /**
  * Simple File Reader Class to Read Text Files
+ * There are lots of ways: https://www.geeksforgeeks.org/different-ways-reading-text-file-java/
  */
 public class FileReader {
     /**

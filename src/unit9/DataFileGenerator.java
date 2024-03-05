@@ -46,17 +46,17 @@ public class DataFileGenerator {
         }
 
         // Build Grade String
-        String formatString1 = "%10s %15s     ";
-        String formatString2 = "%4d";
+        String nameFormatString = "%10s %15s     ";
+        String gradeFormatString = "%4d";
 
         // Serialize Data to File
         try {
             FileWriter fw = new FileWriter(outFile);
             for (int i = 0; i < recordCount; i++) {
-                String outString =  String.format(formatString1, firstNames[i], lastNames[i]);
+                String outString =  String.format(nameFormatString, firstNames[i], lastNames[i]);
                 // generate data and format array
                 for (int j = 0; j < grades[i].length; j++) {
-                    outString = outString.concat(String.format(formatString2, grades[i][j]));
+                    outString = outString.concat(String.format(gradeFormatString, grades[i][j]));
                 }
                 outString = outString.concat("\n");
                 fw.write(outString);
