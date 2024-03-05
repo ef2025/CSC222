@@ -32,7 +32,23 @@ import java.io.IOException;
 
 public class DataParsingAssignment {
     public static void gradeAnalyzer(String inputFile, String outputFile) {
-
+    // read file
+    // split into records i.e. .split("\n") How many records?
+    // split into fields i.e. .split("\\s+")
+    // create arrays
+    // format and store
+    // read data into grades array
+    // calculate student average - don't forget to keep up with best performer
+    // keep up with all student average
+    // calculate standard deviation
+    // create output file
+    // write formatted table data to file
+    // write calculated class average, top performer, and standard deviation
+    // close file
+    // Examine output and make sure you didn't forget anything and spot check of calculations
+    // make sense.
+    // Submit work to Canvas.
+    // Celebrate!
     }
 
     public static void main(String[] args) {
