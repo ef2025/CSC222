@@ -6,6 +6,14 @@ import java.io.IOException;
 import java.util.Random;
 
 public class DataFileGenerator {
+    /**
+     *
+     * @param lastNameFile - used for random last names
+     * @param firstNameFile - used for random first names
+     * @param recordCount - number of records to generate
+     * @param maxGrades - max grades per student (will randomly generate max/2 - max grades)
+     * @param outFile - output data file to be used in assignment
+     */
     public static void create(String lastNameFile, String firstNameFile, int recordCount, int maxGrades, String outFile) {
         // Create Random Number Generator
         Random rand = new Random();

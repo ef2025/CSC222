@@ -9,17 +9,22 @@ import java.util.Scanner; //
  * Simple File Reader Class to Read Text Files
  */
 public class FileReader {
-    public static String read(String fn) {
+    /**
+     * Reads a text file
+     * @param fileName - text file to read
+     * @return - file's contents in a string
+     */
+    public static String read(String fileName) {
         var sb = new StringBuilder();
         try {
-            File file = new File(fn);
+            File file = new File(fileName);
             Scanner reader = new Scanner(file);
             while (reader.hasNextLine()) {
                 sb.append(reader.nextLine()).append("\n");
             }
             reader.close();
         } catch (FileNotFoundException e) {
-            System.out.println("Error: File: " + fn + " was not found in " +
+            System.out.println("Error: File: " + fileName + " was not found in " +
                     System.getProperty("user.dir"));
         }
         return sb.toString();

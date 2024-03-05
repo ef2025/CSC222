@@ -31,6 +31,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class DataParsingAssignment {
+    /**
+     * CSC 222 Coding Project 1
+     * @param inputFile - data file of student records to be analyized
+     * @param outputFile - name of file to be created with summary report
+     */
     public static void gradeAnalyzer(String inputFile, String outputFile) {
     // read file
     // split into records i.e. .split("\n") How many records?
