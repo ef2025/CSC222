@@ -9,33 +9,17 @@ import java.util.Scanner; //
  * Simple File Reader Class to Read Text Files
  */
 public class FileReader {
-
-    // attributes of the class
-    String fileName; // file name passed in constructor
-    StringBuilder sb; // string builder used to concatenate files
-
-    // method constructor
-    FileReader(String fn) {
-        fileName = fn;
-        sb = new StringBuilder();
-    }
-
-    /**
-     * Reads entire text file inserting a carriage return with each line.
-     * @return String containing the contents of the file
-     */
-
-    // class methods
-    String read() {
+    public static String read(String fn) {
+        var sb = new StringBuilder();
         try {
-            File file = new File(fileName);
+            File file = new File(fn);
             Scanner reader = new Scanner(file);
             while (reader.hasNextLine()) {
                 sb.append(reader.nextLine()).append("\n");
             }
             reader.close();
         } catch (FileNotFoundException e) {
-            System.out.println("Error: File: " + fileName + " was not found in " +
+            System.out.println("Error: File: " + fn + " was not found in " +
                     System.getProperty("user.dir"));
         }
         return sb.toString();
@@ -43,8 +27,12 @@ public class FileReader {
 
     // File Reader Test Code
     public static void main(String args[]) {
-        var fr = new FileReader("src/unit9/FileReader.java");
-        System.out.println(fr.read());
+        String contents;
+        if (System.getProperty("os.name").contains("OS X"))
+            contents = FileReader.read("src/unit9/FileReader.java");
+        else
+            contents = FileReader.read("src\\unit9\\FileReader.java");
+        System.out.println(contents);
     }
 }
 

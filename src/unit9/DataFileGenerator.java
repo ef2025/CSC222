@@ -6,18 +6,16 @@ import java.io.IOException;
 import java.util.Random;
 
 public class DataFileGenerator {
-    public DataFileGenerator(String lastNameFile, String firstNameFile, int recordCount, int maxGrades, String outFile) {
+    public static void create(String lastNameFile, String firstNameFile, int recordCount, int maxGrades, String outFile) {
         // Create Random Number Generator
         Random rand = new Random();
 
         // Read the last names
-        FileReader frLastNames = new FileReader(lastNameFile);
-        String contents = frLastNames.read();
+        String contents = FileReader.read(lastNameFile);
         String[] allLastNames = contents.split("\n");
 
         // Read the first names
-        FileReader frFirstNames = new FileReader((firstNameFile));
-        contents = frFirstNames.read();
+        contents = FileReader.read(firstNameFile);
         String[] allFirstNames = contents.split("\n");
 
         // Create Storage
@@ -27,7 +25,7 @@ public class DataFileGenerator {
 
         // Generate Data
         for (int i = 0; i < recordCount; i++) {
-            grades[i] = new int[rand.nextInt(maxGrades) + 1];
+            grades[i] = new int[rand.nextInt(maxGrades/2 + 1) + maxGrades/2];
             for (int j = 0; j < grades[i].length; j++) {
                 grades[i][j] = 60 + rand.nextInt(40);
             }
@@ -64,6 +62,11 @@ public class DataFileGenerator {
 
     public static void main(String[] args) {
         // public DataFileGenerator(String lastNameFile, String firstNameFile, int recordCount, int maxGrades, String outFile)
-        DataFileGenerator dfg = new DataFileGenerator("src\\unit9\\lastnames.txt", "src\\unit9\\firstnames.txt", 50, 6, "src\\unit9\\records.txt");
+        if (System.getProperty("os.name").contains("OS X"))
+            DataFileGenerator.create("src/unit9/lastnames.txt", "src/unit9/firstnames.txt",
+                    50, 6, "src/unit9/records.txt");
+        else
+            DataFileGenerator.create("src\\unit9\\lastnames.txt", "src\\unit9\\firstnames.txt",
+                50, 6, "src\\unit9\\records.txt");
     }
 }
