@@ -1,58 +1,58 @@
-Name                        Grades                      Average
+Name                     Grades                   Average
 
-Miles, Isa                  77  71  74  63  60  82      71.17
-Willis, Cindra              91  73  64  80              77.00
-Byrd, Kaylyn                88  98  93  78  90          89.40
-Singleton, Enid             70  87  95                  84.00
-Bryan, Germana              85  92  86                  87.67
-Terrell, Birgitta           78  80  64  65  79  84      75.00
-Murphy, Drusilla            86  70  70  90  95  69      80.00
-Hines, Harriet              74  99  83  70  63  87      79.33
-Holden, Erminie             70  69  97  98  65  90      81.50
-Fischer, Rasla              68  64  72  72  73          69.80
-Khan, Stace                 65  93  65  92  99          82.80
-Ramsey, Clary               83  89  99  98  88  65      87.00
-Peck, Dorena                74  73  79                  75.33
-Mueller, Loni               86  75  83  90              83.50
-Silver, Andromache          64  91  81  93              82.25
-Cross, Talyah               70  78  60                  69.33
-Tyler, Nessa                63  70  61  84  66  88      72.00
-Dorsey, Jewel               60  86  89  86  67  63      75.17
-Hale, Georgeanna            81  84  94  67  60  68      75.67
-Little, Rosetta             71  96  77  88  63          79.00
-Holloway, Alexandra         76  98  69  91  64          79.60
-Booth, Jerrine              68  69  83  91  70          76.20
-Chu, Amara                  70  64  73                  69.00
-Riley, Rosy                 84  85  68  68  64  64      72.17
-Hoover, Valeda              84  75  74                  77.67
-Fernandez, Ora              62  77  84  66              72.25
-Lowry, Goldy                85  87  64  95              82.75
-Riggs, Tonie                71  96  74  99  82          84.40
-Kenney, Arabella            71  93  91                  85.00
-Tan, Oriana                 75  86  86  71  78          79.20
-Duke, Hayley                87  67  82  76              78.00
-Morrison, Ottilie           89  66  68                  74.33
-Clark, Clarissa             93  60  81  81  84  77      79.33
-Singleton, Penni            89  76  71  95  61  72      77.33
-McNamara, Lorinda           84  83  88  75              82.50
-Thornton, Suzie             71  60  69  87  81  73      73.50
-Williams, Rodi              83  67  60  87  61          71.60
-Liu, Ira                    68  67  93  62              72.50
-Finch, Joline               65  69  63  78              68.75
-Horner, Gavrielle           91  78  91  70  88          83.60
-Wilder, Gene                86  69  79  76  89          79.80
-Fink, Nathalia              65  73  70  74  61  83      71.00
-Lloyd, Eloisa               96  86  67  75  61  60      74.17
-Fink, Pepi                  61  86  68  85  64          72.80
-Nash, Beitris               83  89  88  89              87.25
-Bennett, Kalila             99  62  76  61              74.50
-Todd, Opal                  87  61  85  91  63  76      77.17
-Joyce, Davina               87  79  75  97  84          84.40
-Finch, Remy                 62  90  76  67  90  94      79.83
-Wolfe, Madeleine            72  81  83  76  90          80.40
+Henson, Shir       61  98  94  72     81.25
+Daniel, Harmonia       63  81  95  99  60  78     79.33
+Wolf, Xylina       93  88  70  61     78.00
+Cochran, Tresa       80  76  63  89  84  97     81.50
+Hoyle, Lilyan       73  82  90  85  72  80     80.33
+Rice, Lavinia       92  73  66  80     77.75
+Hughes, Ninette       90  84  70     81.33
+Peterson, Abby       71  74  91  90     81.50
+Donnelly, Sandi       91  71  63  75  99  80     79.83
+Ellington, Sabina       80  87  85  68     80.00
+Stone, Minna       60  95  82  66  88  84     79.17
+ Lam, Lind       70  66  74     70.00
+Gould, Maryellen       92  86  69  82     82.25
+Bennett, Ola       96  93  80  85     88.50
+Lowry, Germain       78  75  61  65     69.75
+Sinclair, Celestine       64  97  89  60  80  68     76.33
+Pickett, Charil       67  90  67  64  92     76.00
+Chen, Pauline       97  94  64  84     84.75
+Vincent, Alexandrina       96  74  98  96     91.00
+Vaughn, Phaidra       72  60  85  99  82  62     76.67
+Petty, Natassia       92  73  61  64     72.50
+Paul, Virgina       61  68  67  92  82     74.00
+Williford, Kizzie       71  75  88  97     82.75
+Beach, Philippe       82  86  74     80.67
+McDowell, Olympie       70  67  75  77  96     77.00
+Elliott, Rafa       66  91  81  61  83  84     77.67
+Rubin, Randy       71  85  66  79  66  92     76.50
+Baker, Rosalyn       98  81  79     86.00
+Rose, Allina       77  63  81     73.67
+Lewis, Kirstyn       97  97  69     87.67
+Shore, Brett       61  98  74     77.67
+Swanson, Lotti       89  66  70  98  88     82.20
+Frazier, Nadean       71  89  92  99  84  67     83.67
+Donovan, Annie       80  91  95  78  98     88.40
+Weinstein, Silvie       90  99  99  89     94.25
+Riddle, Letitia       88  75  89     84.00
+Beatty, Dinah       64  92  98  67  67  97     80.83
+Williford, Katina       94  69  67  85  99     82.80
+Parks, Dacey       65  62  62  85  91     73.00
+Yu, Felicity       76  94  91  92  89  79     86.83
+Cobb, Shanta       94  81  83  74     83.00
+Butler, Kelsey       93  75  60     76.00
+Sparks, Kassia       77  81  81     79.67
+Cox, Denyse       60  99  69  82  60  75     74.17
+Tuttle, Tiphany       72  79  98  78     81.75
+Kemp, Charmine       95  85  79     86.33
+Hamrick, Juieta       83  88  85  84  70  78     81.33
+Sharma, Brook       60  85  67     70.67
+Weinstein, Waly       95  69  97     87.00
+Beasley, Elissa       86  63  70  79  97  73     78.00
 
-Summary Data: 
+Summary Data:
 
-Overall Average: 77.0
-Standard Deviation:  5.45 
-Top Performer:Byrd, Kaylyn Average: 89.40
+Overall Average: 80.30466666666666
+Standard Deviation: 5.29840441390928
+Top Performer: Weinstein, Silvie Average: 94.25

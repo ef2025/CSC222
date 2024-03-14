@@ -37,23 +37,104 @@ public class DataParsingAssignment {
      * @param outputFile - name of file to be created with summary report
      */
     public static void gradeAnalyzer(String inputFile, String outputFile) {
-    // read file
-    // split into records i.e. .split("\n") How many records?
-    // split into fields i.e. .split("\\s+")
-    // create arrays
-    // format and store
-    // read data into grades array
-    // calculate student average - don't forget to keep up with best performer
-    // keep up with all student average
-    // calculate standard deviation
-    // create output file
-    // write formatted table data to file
-    // write calculated class average, top performer, and standard deviation
-    // close file
-    // Examine output and make sure you didn't forget anything and spot check of calculations
-    // make sense.
-    // Submit work to Canvas.
-    // Celebrate!
+        // read file
+        String data = FileReader.read(inputFile);
+        // split into records i.e. .split("\n") How many records?
+        String[] records = data.split("\n");
+        int recordCount = records.length;
+        // split into fields i.e. .split("\\s+")
+        String[] fields;
+        // create arrays
+        String[] firstNames = new String[recordCount];
+        String[] lastNames = new String[recordCount];
+        int[][] grades = new int[recordCount][];
+        double[] average = new double[recordCount];
+        // format and store
+        int numberOfGrades;
+        double bestAverage = 0;  // variables to store best performer and their average
+        String bestFirst = "";
+        String bestLast = "";
+        for (int i = 0; i < recordCount; i++) {
+            numberOfGrades = 0;
+            records[i] = records[i].trim();
+            fields = records[i].split("\\s+"); // split into fields in the loop to make fields split every row
+            firstNames[i] = fields[0]; // reading data into first names array
+            lastNames[i] = fields[1]; // reading data into last names array
+            grades[i] = new int[fields.length - 2];
+            for (int j = 2; j < fields.length; j++) {
+                grades[i][j - 2] = Integer.parseInt(fields[j]); // reading data into grades array
+                numberOfGrades++;
+            }
+            int sum = 0;
+            for (int j = 0; j < numberOfGrades; j++) {
+                sum += grades[i][j];
+            }
+            average[i] = sum / (double)numberOfGrades; // read data into averages array
+            if (average[i] > bestAverage) {
+                bestAverage = average[i]; // keeping track of top average
+                bestFirst = firstNames[i]; // storing best performer
+                bestLast = lastNames[i];
+            }
+        }
+        // create names array to write "lastname, firstname" in output file
+        String[] names = new String[recordCount];
+        for (int i = 0; i < recordCount; i++) {
+            names[i] = lastNames[i] + ", " + firstNames[i];
+        }
+
+        // calculate standard deviation
+        double standardDeviation = 0;
+        double deviation = 0;
+        double totalAverage = 0;
+        for (int i = 0; i < recordCount; i++) {
+            totalAverage += average[i];
+        }
+        totalAverage /= recordCount;
+        for (int i = 0; i < recordCount; i++) {
+            deviation += Math.pow((average[i] - totalAverage), 2);
+        }
+        standardDeviation = Math.sqrt(deviation / recordCount);
+
+
+        // create output file
+        String nameFormatString = "%10s     ";
+        String gradeFormatString = "%4d";
+        String averageFormatString = "%10.2f";
+        try {
+            FileWriter fw = new FileWriter(outputFile);
+            String outString1 = String.format("%-24s %-24s %s", "Name", "Grades", "Average\n\n"); //write header
+            fw.write(outString1);
+            for (int i = 0; i < recordCount; i++) { //write formatted table data to file
+                String outString =  String.format(nameFormatString, names[i]);
+                // generate data and format array
+                for (int j = 0; j < grades[i].length; j++) {
+                    outString = outString.concat(String.format(gradeFormatString, grades[i][j]));
+                }
+                outString = outString.concat(String.format(averageFormatString, average[i]));
+                outString = outString.concat("\n");
+                fw.write(outString);
+            }
+            String outString2 = "\nSummary Data:"; // write calculated class average, top performer, standard deviation
+            fw.write(outString2);
+            String overallAvg = "\n\nOverall Average: " + totalAverage;
+            String outString3 = String.format(overallAvg);
+            fw.write(outString3);
+            String standardDev = "\nStandard Deviation: " + standardDeviation;
+            String outString4 = String.format(standardDev);
+            fw.write(outString4);
+            String topPerf = "\nTop Performer: " + bestLast + ", " + bestFirst + " Average: " + bestAverage;
+            String outString5 = String.format(topPerf);
+            fw.write(outString5);
+
+            fw.close(); //close file
+        }
+        catch (IOException e) {
+            System.out.println("Exception Thrown: " + e.toString());
+        }
+        // Examine output and make sure you didn't forget anything and spot check of calculations
+        // make sense.
+        // Submit work to Canvas.
+        // Celebrate!
     }
 
     public static void main(String[] args) {
@@ -62,12 +143,14 @@ public class DataParsingAssignment {
         if (System.getProperty("os.name").contains("OS X")) {
             recordFile = "src/unit9/records.txt";
             summaryFile = "src/unit9/summary.txt";
-            DataFileGenerator.create("src/unit9/lastnames.txt", "src/unit9/firstnames.txt", 50, 6, recordFile);
+            DataFileGenerator.create("src/unit9/lastnames.txt", "src/unit9/firstnames.txt",
+                    50, 6, recordFile);
         }
         else {
             recordFile = "src\\unit9\\records.txt";
             summaryFile = "src\\unit9\\summary.txt";
-            DataFileGenerator.create("src\\unit9\\lastnames.txt", "src\\unit9\\firstnames.txt", 50, 6, recordFile);
+            DataFileGenerator.create("src\\unit9\\lastnames.txt", "src\\unit9\\firstnames.txt",
+                    50, 6, recordFile);
         }
         gradeAnalyzer(recordFile, summaryFile);
     }
