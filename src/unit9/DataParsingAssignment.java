@@ -97,12 +97,12 @@ public class DataParsingAssignment {
 
 
         // create output file
-        String nameFormatString = "%10s     ";
+        String nameFormatString = "%-26s";
         String gradeFormatString = "%4d";
-        String averageFormatString = "%10.2f";
+        String averageFormatString = "%23.2f";
         try {
             FileWriter fw = new FileWriter(outputFile);
-            String outString1 = String.format("%-24s %-24s %s", "Name", "Grades", "Average\n\n"); //write header
+            String outString1 = String.format("%-27s %-27s %s", "Name", "Grades", "Average\n\n"); //write header
             fw.write(outString1);
             for (int i = 0; i < recordCount; i++) { //write formatted table data to file
                 String outString =  String.format(nameFormatString, names[i]);
@@ -116,14 +116,14 @@ public class DataParsingAssignment {
             }
             String outString2 = "\nSummary Data:"; // write calculated class average, top performer, standard deviation
             fw.write(outString2);
-            String overallAvg = "\n\nOverall Average: " + totalAverage;
-            String outString3 = String.format(overallAvg);
+            String overallAvg = "\n\nOverall Average: ";
+            String outString3 = String.format("%s%.2f", overallAvg, totalAverage);
             fw.write(outString3);
-            String standardDev = "\nStandard Deviation: " + standardDeviation;
-            String outString4 = String.format(standardDev);
+            String standardDev = "\nStandard Deviation: ";
+            String outString4 = String.format("%s%.2f", standardDev, standardDeviation);
             fw.write(outString4);
-            String topPerf = "\nTop Performer: " + bestLast + ", " + bestFirst + " Average: " + bestAverage;
-            String outString5 = String.format(topPerf);
+            String topPerf = "\nTop Performer: " + bestLast + ", " + bestFirst + " Average: ";
+            String outString5 = String.format("%s%.2f", topPerf, bestAverage);
             fw.write(outString5);
 
             fw.close(); //close file
