@@ -99,7 +99,7 @@ public class DataParsingAssignment {
         // create output file
         String nameFormatString = "%-26s";
         String gradeFormatString = "%4d";
-        String averageFormatString = "%23.2f";
+        String averageFormatString = "%11.2f";
         try {
             FileWriter fw = new FileWriter(outputFile);
             String outString1 = String.format("%-27s %-27s %s", "Name", "Grades", "Average\n\n"); //write header
@@ -107,9 +107,11 @@ public class DataParsingAssignment {
             for (int i = 0; i < recordCount; i++) { //write formatted table data to file
                 String outString =  String.format(nameFormatString, names[i]);
                 // generate data and format array
+                String gradeString = "";
                 for (int j = 0; j < grades[i].length; j++) {
-                    outString = outString.concat(String.format(gradeFormatString, grades[i][j]));
+                    gradeString = gradeString.concat(String.format(gradeFormatString, grades[i][j]));
                 }
+                outString = outString.concat(String.format("%-24s", gradeString));
                 outString = outString.concat(String.format(averageFormatString, average[i]));
                 outString = outString.concat("\n");
                 fw.write(outString);
